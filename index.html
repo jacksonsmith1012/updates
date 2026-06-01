@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>From Where I Am</title>
+
+  <!-- Fonts & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="site-wrapper">
+
+    <!-- ── Header ─────────────────────────────────────────── -->
+    <header class="site-header">
+      <!-- Profile photo is injected by main.js. Replace photos/profile.jpg with your own. -->
+      <div id="header-profile"></div>
+      <h1 class="blog-title" id="blog-title">From Where I Am</h1>
+      <p class="blog-subtitle" id="blog-subtitle"></p>
+    </header>
+
+    <!-- ── Accent divider ─────────────────────────────────── -->
+    <div class="accent-divider">Updates</div>
+
+    <!-- ── Post Feed ──────────────────────────────────────── -->
+    <main id="post-feed" class="post-feed"></main>
+
+    <!-- ── Footer ─────────────────────────────────────────── -->
+    <footer class="site-footer">
+      <div class="footer-dots">
+        <div class="footer-dot" style="background:var(--purple)"></div>
+        <div class="footer-dot" style="background:var(--cyan)"></div>
+        <div class="footer-dot" style="background:var(--pink)"></div>
+      </div>
+      <span>
+        Made with love for the people back home &nbsp;·&nbsp;
+        <span id="footer-name"></span> &nbsp;·&nbsp;
+        <span id="footer-year"></span>
+      </span>
+    </footer>
+
+  </div><!-- /site-wrapper -->
+
+  <!-- ── Lightbox ───────────────────────────────────────────── -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close">×</button>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="Photo" />
+    <p class="lightbox-caption" id="lightbox-caption"></p>
+  </div>
+
+  <!-- Load posts data first, then the renderer -->
+  <script src="posts.js"></script>
+  <script src="main.js"></script>
+
+</body>
+</html>
